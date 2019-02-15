@@ -1,0 +1,5 @@
+reset
+clear
+as public-branch0 public-branch0
+ld public-branch0
+break set HALT

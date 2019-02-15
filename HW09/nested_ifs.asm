@@ -1,0 +1,290 @@
+.CODE
+.FALIGN
+
+testIfs
+	; PROLOGUE
+	STR R7, R6, #-2;
+	STR R5, R6, #-3;
+	ADD R6, R6, #-3;
+	ADD R5, R6, #0;
+	; FUNCTION BODY
+
+	LDR R0, R5, #3;
+	ADD R6, R6, #-1;
+	STR R0, R6, #0;
+
+s	LDR R0, R6, #0;
+	ADD R0, R6, #-1;
+	STR R0, R6, #0;
+
+	ADD R6, R6, #-1
+	CONST R0, #16;
+	HICONST R0, #0;
+	STR R0, R6, #0
+
+	LDR R0, R6, #0;
+	LDR R1, R6, #1;
+	CMP R0, R1;
+	BRp END_GT0;
+	CONST R3, #0;
+	BRnzp GT0;
+GT0
+	CONST R3, #1;
+END_GT0
+	ADD R6, R6, #1;
+	STR R3, R6, #0;
+
+	ADD R6, R6, #1;
+	LDR R0, R6, #-1;
+IF0
+	BRz ELSE0
+	LDR R0, R6, #0;
+	ADD R0, R6, #-1;
+	STR R0, R6, #0;
+
+	ADD R6, R6, #-1
+	CONST R0, #8;
+	HICONST R0, #0;
+	STR R0, R6, #0
+
+	LDR R0, R6, #0;
+	LDR R1, R6, #1;
+	CMP R0, R1;
+	BRp END_GT1;
+	CONST R3, #0;
+	BRnzp GT1;
+GT1
+	CONST R3, #1;
+END_GT1
+	ADD R6, R6, #1;
+	STR R3, R6, #0;
+
+	ADD R6, R6, #1;
+	LDR R0, R6, #-1;
+IF1
+	BRz ELSE1
+	LDR R0, R6, #0;
+	ADD R0, R6, #-1;
+	STR R0, R6, #0;
+
+	ADD R6, R6, #-1
+	CONST R0, #4;
+	HICONST R0, #0;
+	STR R0, R6, #0
+
+	LDR R0, R6, #0;
+	LDR R1, R6, #1;
+	CMP R0, R1;
+	BRp END_GT2;
+	CONST R3, #0;
+	BRnzp GT2;
+GT2
+	CONST R3, #1;
+END_GT2
+	ADD R6, R6, #1;
+	STR R3, R6, #0;
+
+	ADD R6, R6, #1;
+	LDR R0, R6, #-1;
+IF2
+	BRz ELSE2
+	ADD R6, R6, #-1
+	CONST R0, #0;
+	HICONST R0, #0;
+	STR R0, R6, #0
+
+	JMP ENDIF2
+ELSE2
+	ADD R6, R6, #-1
+	CONST R0, #1;
+	HICONST R0, #0;
+	STR R0, R6, #0
+
+ENDIF2
+	JMP ENDIF2
+ELSE1
+	ADD R6, R6, #-1
+	CONST R0, #2;
+	HICONST R0, #0;
+	STR R0, R6, #0
+
+ENDIF1
+	JMP ENDIF2
+ELSE0
+	LDR R0, R6, #0;
+	ADD R0, R6, #-1;
+	STR R0, R6, #0;
+
+	ADD R6, R6, #-1
+	CONST R0, #24;
+	HICONST R0, #0;
+	STR R0, R6, #0
+
+	LDR R0, R6, #0;
+	LDR R1, R6, #1;
+	CMP R0, R1;
+	BRp END_GT3;
+	CONST R3, #0;
+	BRnzp GT3;
+GT3
+	CONST R3, #1;
+END_GT3
+	ADD R6, R6, #1;
+	STR R3, R6, #0;
+
+	ADD R6, R6, #1;
+	LDR R0, R6, #-1;
+IF3
+	BRz ELSE3
+	LDR R0, R6, #0;
+	ADD R0, R6, #-1;
+	STR R0, R6, #0;
+
+	ADD R6, R6, #-1
+	CONST R0, #20;
+	HICONST R0, #0;
+	STR R0, R6, #0
+
+	LDR R0, R6, #0;
+	LDR R1, R6, #1;
+	CMP R0, R1;
+	BRp END_GT4;
+	CONST R3, #0;
+	BRnzp GT4;
+GT4
+	CONST R3, #1;
+END_GT4
+	ADD R6, R6, #1;
+	STR R3, R6, #0;
+
+	ADD R6, R6, #1;
+	LDR R0, R6, #-1;
+IF4
+	BRz ELSE4
+	ADD R6, R6, #-1
+	CONST R0, #3;
+	HICONST R0, #0;
+	STR R0, R6, #0
+
+	JMP ENDIF4
+ELSE4
+	ADD R6, R6, #-1
+	CONST R0, #4;
+	HICONST R0, #0;
+	STR R0, R6, #0
+
+ENDIF4
+	JMP ENDIF4
+ELSE3
+	LDR R0, R6, #0;
+	ADD R0, R6, #-1;
+	STR R0, R6, #0;
+
+	ADD R6, R6, #-1
+	CONST R0, #32;
+	HICONST R0, #0;
+	STR R0, R6, #0
+
+	LDR R0, R6, #0;
+	LDR R1, R6, #1;
+	CMP R0, R1;
+	BRp END_GT5;
+	CONST R3, #0;
+	BRnzp GT5;
+GT5
+	CONST R3, #1;
+END_GT5
+	ADD R6, R6, #1;
+	STR R3, R6, #0;
+
+	ADD R6, R6, #1;
+	LDR R0, R6, #-1;
+IF5
+	BRz ELSE5
+	ADD R6, R6, #-1
+	CONST R0, #5;
+	HICONST R0, #0;
+	STR R0, R6, #0
+
+	JMP ENDIF5
+ELSE5
+	ADD R6, R6, #-1
+	CONST R0, #246;
+	HICONST R0, #255;
+	STR R0, R6, #0
+
+ENDIF5
+ENDIF3
+ENDIF0
+	; EPILOGUE
+	LDR R0, R6, #0;
+	STR R0, R5, #2;
+	ADD R6, R5, #0;
+	ADD R6, R6, #2;
+	LDR R7, R5, #1;
+	LDR R5, R5, #0;
+	RET
+
+.FALIGN
+
+main
+	; PROLOGUE
+	STR R7, R6, #-2;
+	STR R5, R6, #-3;
+	ADD R6, R6, #-3;
+	ADD R5, R6, #0;
+	; FUNCTION BODY
+
+	ADD R6, R6, #-1
+	CONST R0, #5;
+	HICONST R0, #0;
+	STR R0, R6, #0
+
+	JSR testIfs
+
+	JSR printnum
+
+	JSR endl
+
+	ADD R6, R6, #-1
+	CONST R0, #11;
+	HICONST R0, #0;
+	STR R0, R6, #0
+
+	JSR testIfs
+
+	JSR printnum
+
+	JSR endl
+
+	ADD R6, R6, #-1
+	CONST R0, #28;
+	HICONST R0, #0;
+	STR R0, R6, #0
+
+	JSR testIfs
+
+	JSR printnum
+
+	JSR endl
+
+	ADD R6, R6, #-1
+	CONST R0, #35;
+	HICONST R0, #0;
+	STR R0, R6, #0
+
+	JSR testIfs
+
+	JSR printnum
+
+	JSR endl
+
+	; EPILOGUE
+	LDR R0, R6, #0;
+	STR R0, R5, #2;
+	ADD R6, R5, #0;
+	ADD R6, R6, #2;
+	LDR R7, R5, #1;
+	LDR R5, R5, #0;
+	RET
+

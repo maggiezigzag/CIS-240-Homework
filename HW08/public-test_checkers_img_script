@@ -1,0 +1,5 @@
+reset
+clear
+as public-test_checkers_img public-test_checkers_img
+ld public-test_checkers_img
+break set HALT

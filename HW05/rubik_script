@@ -1,0 +1,6 @@
+clear
+reset
+as os os
+ld os
+ld rubik
+break set TRAP_HALT

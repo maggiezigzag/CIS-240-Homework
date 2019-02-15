@@ -1,0 +1,5 @@
+reset
+as sort2 sort2
+ld sort2
+set PC 0
+break set END

@@ -1,0 +1,7 @@
+reset
+clear
+as os os
+ld os
+ld wireframe
+break set HALT
+break set TRAP_HALT
